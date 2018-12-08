@@ -28,7 +28,7 @@ def post_params
   params.require(:post).permit(:body, :user_id)
 end
 
-def set_account
+def set_post
   @post = current_user.posts.find(params[:id])
 end
 

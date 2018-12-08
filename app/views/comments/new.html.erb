@@ -1,0 +1,8 @@
+<% @comment.id ? 'Edit Comment' : 'Create Comment' %>
+
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body, required: true, autofocus: true %>
+  <%= f.submit %>
+  
+<% end %>

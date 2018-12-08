@@ -9,7 +9,19 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+
+
   <body>
+  <div class="container">  <!-- newly added code -->
+  <nav>
+    <div class="nav-wrapper blue-grey darken-1">
+      <a href="#" class="brand-logo center">Friendblock</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html"></a></li>
+        <li><a href="badges.html"></a></li>
+      </ul>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

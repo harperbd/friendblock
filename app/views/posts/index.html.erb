@@ -1,6 +1,6 @@
 <%= button_to "log out", destroy_user_session_path, method: :delete %>
 
-<h1>View all the posts </h1>
+<h3> These are your posts </h3>
 
 <%= link_to 'Create new post', new_post_path %>
 <br/> 
@@ -9,10 +9,15 @@
 
 <% @posts.each do |post| %>
   <%#= todo: add "post by user" %>
-  <%= link_to post.body, post%><br />
+  <br/> 
+  <br/> 
+  <%= link_to post.body, post%> <br />
+
+  <%= link_to 'comment on this post', new_post_comment_path(post.id) %>
+
   <% post.comments.each do |comment| %>
     <%#= todo: add "comment by user" %>
-    <%= comment.body %><br />
+    <%= link_to comment.body, comment %><br />
   <% end %>
   <br/>
 <% end %>
