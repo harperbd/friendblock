@@ -1,7 +1,15 @@
+<%= button_to "log out", destroy_user_session_path, method: :delete %>
+
 <h1>View all the posts </h1>
+
+<%= link_to 'Create new post', new_post_path %>
+<br/> 
+<br/> 
+<br/> 
 
 <% @posts.each do |post| %>
   <%= link_to post.body, post%>
   <br/>
 <% end %>
+
 

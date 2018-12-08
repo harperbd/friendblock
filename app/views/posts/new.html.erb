@@ -1,0 +1,10 @@
+<% @post.id ? 'Edit Post' : 'Create Post' %>
+
+<%= form_for @post do |f| %>
+  <br/>
+  <%= f.label :body %>
+  <%= f.text_field :body, required: true, autofocus: true %>
+  <br/>
+  <%= f.submit %>
+  
+<% end %>

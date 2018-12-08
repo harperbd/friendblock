@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = current_user.users.new(user_params)
     if @user.save
-      flash[:success] = "Account Created"
+      flash[:success] = "User Created"
       redirect_to users_path
     else
       flash[:error] = "error #{@user.errors.full_messages.join("\n")}"
