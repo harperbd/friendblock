@@ -10,7 +10,9 @@
   user.save!(validate: false)
 
   1.times do |j|
-    Post.create(body: "#{i}_#{j} This is a post", user_id: user.id)
+    post = Post.create(body: "#{i}_#{j} This is a post", user_id: user.id)
+    comment = Comment.create(body: "#{i}_#{j} This is a comment on a post", user_id: user.id)
+    CommentOnPost.create(post_id: post.id, comment_id: comment.id)
   end
 
 end
