@@ -8,7 +8,12 @@
 <br/> 
 
 <% @posts.each do |post| %>
-  <%= link_to post.body, post%>
+  <%#= todo: add "post by user" %>
+  <%= link_to post.body, post%><br />
+  <% post.comments.each do |comment| %>
+    <%#= todo: add "comment by user" %>
+    <%= comment.body %><br />
+  <% end %>
   <br/>
 <% end %>
 
